@@ -1,5 +1,7 @@
 package com.develogical.app;
 
+import java.util.Arrays;
+
 public class QueryProcessor {
 
     public String process(String query) throws InterruptedException {
@@ -23,7 +25,14 @@ public class QueryProcessor {
            
            return String.valueOf(intOne + intTwo);
         }
-        
+        else if (query.toLowerCase().contains("largest")) {
+            String[] array = query.split("largest:");
+            String[] strArray = array[1].split(",");
+            Arrays.sort(strArray);
+           
+            return strArray[strArray.length-1];
+                       
+         }
         else {
         	Thread.sleep(100000);
         }
