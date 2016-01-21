@@ -136,9 +136,11 @@ public class QueryProcessor {
         	  return String.valueOf(fib(Integer.valueOf(s)));
         	  
               
-              
-              
          }
+        
+        else if (query.toLowerCase().contains("Eiffel")) {
+        	return "Paris";
+        }
         
         else {
         	Thread.sleep(10000);
