@@ -9,7 +9,7 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         }
         //Some comment
-        else if (query.toLowerCase().contains("dave jobs")) {
+        else if (query.toLowerCase().contains("steve jobs")) {
             return "Apple Inc. founder!";
         }
         
