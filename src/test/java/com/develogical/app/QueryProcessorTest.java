@@ -16,7 +16,7 @@ public class QueryProcessorTest {
 	public void tets() throws InterruptedException {
 
 		
-		assertEquals("64", queryProcessor.process("b5aeaf80: which of the following numbers is both a square and a cube: 64, 5, 5, 5") );
+		assertEquals("-4", queryProcessor.process("q=6bb3e7c0: what is 13 minus 17") );
 	}
 	
 	

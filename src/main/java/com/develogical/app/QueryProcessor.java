@@ -49,6 +49,14 @@ public class QueryProcessor {
             return String.valueOf(intOne * intTwo);
          }
         
+        else if (query.toLowerCase().contains("minus")) {
+            String[] array = query.split(" ");
+            int intOne = Integer.valueOf(array[3]);
+            int intTwo = Integer.valueOf(array[5]);
+            
+            return String.valueOf(intOne - intTwo);
+         }
+        
         else if (query.toLowerCase().contains("square")) {
          
         	  String[] array = query.split("cube:");
