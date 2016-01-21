@@ -107,8 +107,20 @@ public class QueryProcessor {
             	}
             	
             }
+            
+            int[] ansList = new int[ans.size()];
+            int index = 0;
+           for (String s : ans) {
+        	   ansList[index++] = (Integer.valueOf(s));
+           }
+           Arrays.sort(ansList);
            
-            return  String.join(", ", ans);
+           String k = "";
+           for (int i : ansList) {
+        	   k += i + ",";
+           }
+           
+            return  k;
             
        }
         
@@ -148,7 +160,7 @@ public class QueryProcessor {
     }
     
     public int fib (int n) {
-    	int a = 0;
+    	int a = 1;
     	int b = 1;
     	
     	for (int i = 0; i < n-1; i++) {
