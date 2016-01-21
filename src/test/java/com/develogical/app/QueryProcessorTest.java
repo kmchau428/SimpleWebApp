@@ -16,7 +16,7 @@ public class QueryProcessorTest {
 	public void tets() throws InterruptedException {
 
 		
-		assertEquals("379, 449", queryProcessor.process("2c434900: which of the following numbers are primes: 351, 449, 684, 379") );
+		assertEquals("", queryProcessor.process("q=9383f410: what is the 12th number in the Fibonacci sequence") );
 	}
 	
 	

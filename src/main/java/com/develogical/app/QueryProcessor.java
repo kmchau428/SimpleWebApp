@@ -114,17 +114,16 @@ public class QueryProcessor {
         
         else if (query.toLowerCase().contains("fibonacci")) {
             
-        	  String[] array = query.split(":");
+        	  String[] array = query.split(" ");
+        	  String s = array[4];
+        	  s = s.replace("th", "");
+        	  s = s.replace("st", "");
+        	  s = s.replace("nd", "");
+        	  s = s.replace("rd", "");
+
+        	  return String.valueOf(fib(Integer.valueOf(s)));
+        	  
               
-              for (char c : array[1].toCharArray()) {
-            	  try {
-            		  int i = Integer.valueOf(String.valueOf(c));
-                      return String.valueOf(fib(i));
-            	  }
-            	  catch (Exception e) {
-            		  continue;
-            	  }
-              }
               
               
          }
