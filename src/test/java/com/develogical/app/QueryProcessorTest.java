@@ -14,8 +14,10 @@ public class QueryProcessorTest {
     
 	@Test
 	public void tets() throws InterruptedException {
-		String[] array = "ff3cd6e0: which of the following numbers is the largest: 288, 26".split(" ");
+
 		
-		assertEquals("288", queryProcessor.process("ff3cd6e0: which of the following numbers is the largest: 288, 26") );
+		assertEquals("7", queryProcessor.process("ed52a100: what is 6 plus 1") );
 	}
+	
+	
 }
