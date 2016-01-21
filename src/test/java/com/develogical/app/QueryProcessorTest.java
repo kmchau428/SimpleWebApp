@@ -16,7 +16,7 @@ public class QueryProcessorTest {
 	public void tets() throws InterruptedException {
 
 		
-		assertEquals("0", queryProcessor.process("468a00c0: what is 0 multiplied by 10") );
+		assertEquals("", queryProcessor.process("6b11e5c0: which of the following numbers is both a square and a cube: 3, 178") );
 	}
 	
 	

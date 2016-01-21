@@ -48,6 +48,23 @@ public class QueryProcessor {
             return String.valueOf(intOne * intTwo);
          }
         
+        else if (query.toLowerCase().contains("square")) {
+         
+        	  String[] array = query.split("cube:");
+              array[1].replaceAll(" ", "");
+              String[] strArray = array[1].split(",");
+              
+              for (String s : strArray) {
+              	s = s.trim();
+              	if (Integer.valueOf(s)  == 0 || Integer.valueOf(s)  == 1)
+              		return s;
+              }
+              
+              return "";
+              
+              
+         }
+        
         
         
         
