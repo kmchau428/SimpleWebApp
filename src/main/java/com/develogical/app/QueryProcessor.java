@@ -13,11 +13,19 @@ public class QueryProcessor {
             return "Apple Inc. founder!";
         }
         
-       // else if (query.toLowerCase().contains("your name")) {
-       //     return "team 1";
-       // }
+        else if (query.toLowerCase().contains("your name")) {
+            return "team 1";
+        }
+        else if (query.toLowerCase().contains("plus")) {
+           String[] array = query.split(" ");
+           int intOne = Integer.valueOf(array[2]);
+           int intTwo = Integer.valueOf(array[4]);
+           
+           return String.valueOf(intOne + intTwo);
+        }
+        
         else {
-        	Thread.sleep(10000);
+        	Thread.sleep(100000);
         }
         
         
