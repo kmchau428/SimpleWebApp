@@ -96,6 +96,23 @@ public class QueryProcessor {
             
        }
         
+        else if (query.toLowerCase().contains("fibonacci")) {
+            
+        	  String[] array = query.split(":");
+              
+              for (char c : array[1].toCharArray()) {
+            	  try {
+            		  int i = Integer.valueOf(String.valueOf(c));
+                      return String.valueOf(fib(i));
+            	  }
+            	  catch (Exception e) {
+            		  continue;
+            	  }
+              }
+              
+              
+         }
+        
         else {
         	Thread.sleep(10000);
         }
@@ -113,6 +130,18 @@ public class QueryProcessor {
     	}
     	
     	return true;
+    }
+    
+    public int fib (int n) {
+    	int a = 1;
+    	int b = 1;
+    	
+    	for (int i = 0; i < n-1; i++) {
+    		int temp = a;
+    		a = b;
+    		b = temp + b;
+    	}
+    	return a;
     }
     
     
