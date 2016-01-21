@@ -13,9 +13,9 @@ public class QueryProcessor {
             return "Apple Inc. founder!";
         }
         
-        else if (query.toLowerCase().contains("your name")) {
-            return "team 1";
-        }
+       // else if (query.toLowerCase().contains("your name")) {
+       //     return "team 1";
+       // }
         else {
         	Thread.sleep(10000);
         }
