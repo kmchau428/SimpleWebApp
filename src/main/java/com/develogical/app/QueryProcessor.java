@@ -28,10 +28,16 @@ public class QueryProcessor {
         else if (query.toLowerCase().contains("largest")) {
             String[] array = query.split("largest:");
             array[1].replaceAll(" ", "");
-            String[] strArray = array[1].split(", ");
-            Arrays.sort(strArray);
+            String[] strArray = array[1].split(",");
+            
+            int max = Integer.MIN_VALUE;
+            for (String s : strArray) {
+            	s = s.trim();
+            	if (Integer.valueOf(s) > max)
+            		max = Integer.valueOf(s);
+            }
            
-            return strArray[0].trim();
+            return String.valueOf(max);
                        
          }
         else {
