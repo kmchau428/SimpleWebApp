@@ -16,7 +16,6 @@ public class QueryProcessorTest {
 	public void tets() throws InterruptedException {
 
 		
-		assertEquals("", queryProcessor.process("q=9383f410: what is the 12th number in the Fibonacci sequence") );
 	}
 	
 	
