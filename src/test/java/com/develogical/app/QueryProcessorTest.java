@@ -16,7 +16,7 @@ public class QueryProcessorTest {
 	public void tets() throws InterruptedException {
 
 		
-		assertEquals("5", queryProcessor.process("ac98af50: what is the 5th number in the Fibonacci sequence") );
+		assertEquals("3", queryProcessor.process("ac98af50: what is the 5th number in the Fibonacci sequence") );
 	}
 	
 	
