@@ -40,6 +40,18 @@ public class QueryProcessor {
             return String.valueOf(max);
                        
          }
+        else if (query.toLowerCase().contains("multiplied by")) {
+            String[] array = query.split(" ");
+            int intOne = Integer.valueOf(array[3]);
+            int intTwo = Integer.valueOf(array[6]);
+            
+            return String.valueOf(intOne * intTwo);
+         }
+        
+        
+        
+        
+        
         else {
         	Thread.sleep(10000);
         }

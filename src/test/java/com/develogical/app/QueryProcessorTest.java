@@ -16,7 +16,7 @@ public class QueryProcessorTest {
 	public void tets() throws InterruptedException {
 
 		
-		assertEquals("7", queryProcessor.process("ed52a100: what is 6 plus 1") );
+		assertEquals("0", queryProcessor.process("468a00c0: what is 0 multiplied by 10") );
 	}
 	
 	
