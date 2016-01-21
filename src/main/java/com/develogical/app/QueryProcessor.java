@@ -34,7 +34,7 @@ public class QueryProcessor {
                        
          }
         else {
-        	Thread.sleep(100000);
+        	Thread.sleep(10000);
         }
         
         
