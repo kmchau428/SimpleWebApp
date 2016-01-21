@@ -54,14 +54,22 @@ public class QueryProcessor {
         	  String[] array = query.split("cube:");
               array[1].replaceAll(" ", "");
               String[] strArray = array[1].split(",");
-              
+              ArrayList<String> ans = new ArrayList<String>();
+
               for (String s : strArray) {
               	s = s.trim();
-              	if (Integer.valueOf(s)  == 0 || Integer.valueOf(s)  == 1)
-              		return s;
+              	double number = Double.valueOf(s);
+              	
+              	if(Math.round(Math.sqrt(number))==Math.sqrt(number)
+              			&&
+              			Math.round(Math.cbrt(number))==Math.cbrt(number)
+          			){
+              		ans.add(s);
+              	}
+              	
               }
               
-              return "";
+              return  String.join(",", ans);
               
               
          }
