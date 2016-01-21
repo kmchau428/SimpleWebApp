@@ -27,10 +27,11 @@ public class QueryProcessor {
         }
         else if (query.toLowerCase().contains("largest")) {
             String[] array = query.split("largest:");
-            String[] strArray = array[1].split(",");
+            array[1].replaceAll(" ", "");
+            String[] strArray = array[1].split(", ");
             Arrays.sort(strArray);
            
-            return strArray[strArray.length-1];
+            return strArray[0].trim();
                        
          }
         else {
