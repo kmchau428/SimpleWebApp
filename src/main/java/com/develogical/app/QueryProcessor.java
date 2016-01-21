@@ -108,7 +108,7 @@ public class QueryProcessor {
             	
             }
            
-            return  String.join(",", ans);
+            return  String.join(", ", ans);
             
        }
         

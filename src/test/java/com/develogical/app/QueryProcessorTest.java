@@ -16,7 +16,7 @@ public class QueryProcessorTest {
 	public void tets() throws InterruptedException {
 
 		
-		assertEquals("-4", queryProcessor.process("q=6bb3e7c0: what is 13 minus 17") );
+		assertEquals("379, 449", queryProcessor.process("2c434900: which of the following numbers are primes: 351, 449, 684, 379") );
 	}
 	
 	
