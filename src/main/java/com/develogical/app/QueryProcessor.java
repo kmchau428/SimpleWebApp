@@ -1,5 +1,6 @@
 package com.develogical.app;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class QueryProcessor {
@@ -65,9 +66,35 @@ public class QueryProcessor {
               
          }
         
-        
-        
-        
+        else if (query.toLowerCase().contains("primes")) {
+            
+      	  String[] array = query.split("primes:");
+      	  ArrayList<Integer> list = new ArrayList<Integer>();
+      	  
+            array[1].replaceAll(" ", "");
+            String[] strArray = array[1].split(",");
+            
+            ArrayList<String> ans = new ArrayList<String>();
+            for (String s : strArray) {
+            	s = s.trim();
+            	boolean isPrime = true;
+            	int i = Integer.valueOf(s);
+            	
+            	if (i <= 1)
+            		continue;
+            	
+            	if (i == 2)
+            		ans.add(s);
+            	
+            	if (isPrime(i)) {
+            		ans.add(s);
+            	}
+            	
+            }
+           
+            return  String.join(",", ans);
+            
+       }
         
         else {
         	Thread.sleep(10000);
@@ -77,4 +104,16 @@ public class QueryProcessor {
         
         return "";
     }
+    
+    public boolean isPrime(int n) {
+    	for (int i = 2; i < n; i++) {
+    		if (n%i == 0) {
+    			return false;
+    		}
+    	}
+    	
+    	return true;
+    }
+    
+    
 }

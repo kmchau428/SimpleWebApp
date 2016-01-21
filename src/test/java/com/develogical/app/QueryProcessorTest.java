@@ -16,7 +16,7 @@ public class QueryProcessorTest {
 	public void tets() throws InterruptedException {
 
 		
-		assertEquals("", queryProcessor.process("6b11e5c0: which of the following numbers is both a square and a cube: 3, 178") );
+		assertEquals("503,157", queryProcessor.process("d304b790: which of the following numbers are primes: 503, 216, 157, 32") );
 	}
 	
 	
